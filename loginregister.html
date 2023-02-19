@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login|></title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">-->
+    </head>
+    <body>
+
+        <nav class="nav nav_top">
+            <div class="logo">
+                <a>LOGO</a>
+            </div>
+            <div class="nav_side">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a> 
+                <a href="Contact.html">Contact</a>
+                <a href="loginregister.html">Login/Register</a>
+            </div>
+        </nav>
+
+                    <!-- ======= Feed/Login Section ======= -->
+
+        <div class="feed">
+            <h2>Login/Register</h2>
+            <div class="feed_form">
+                <form onsubmit="return validatioin()" name="Submit-googlesheet" method="post" >
+                    <input class="review-form-input" type="text" id="username" name="Username" placeholder="Username"><br>
+                    <span id="errorname" style="color: red;"></span>
+                    <input class="review-form-input" type="email" id="email" name="Email ID" placeholder="Email ID"><br>
+                    <span id="erroremail" style="color: red;"></span>
+                    <input class="review-form-input" type="number" id="number" name="Number" placeholder="Number"><br>
+                    <span id="errornumber" style="color: red;"></span>
+                    
+                    
+                    <input type="submit" value="Login" class="btn">
+                    <input type="reset" value="New User Registration" class="btn">
+                </form>
+            </div>
+        </div>
+
+<script>
+    const scriptURL =
+   'https://script.google.com/macros/s/AKfycbzXFP0PtTjJSOXCo53bDXXnO9IFITjGLvoAxyYOTy-1WBsXu_FJTTuMeUNfwjJrDThJ/exec'
+    const form = document.forms['Submit-googlesheet']
+         
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+                    })
+            .then(response => alert(
+                "Thanks for conecting us..! We Will contact you soon..."))
+            .catch(error => console.error('Error!', error.message))
+    })
+         
+</script>
+
+                    <!-- ======= End of Feed/Login Section ======= -->       <!--Link of googlespread-sheet (Exel-sheet) : "https://docs.google.com/spreadsheets/d/1DjVIibihOcix7GWBM-uMRC46NlbmexcVf6g2q4pe9ko/edit?usp=sharing"-->
+
+    <hr><hr><hr><hr>
+
+                        <!-- ======= Footer Section ======= -->
+
+        <footer>
+            <div class="footer_logo">
+               
+            </div>
+            <div class="pages">
+                <h3>Pages</h3>
+                <a href="about.html">About Us</a> |
+                <a href="services.html">Services</a> |
+                <a href="loginregister.html">Login</a> |
+            </div>
+            
+            <div class="social">
+                <h3>Follow us</h3>
+                <a href="ht://business.facebook.com/1Stopai-102490171820303/?fref=nf" target="_black"><i class="fa fa-facebook"></i></a> |
+                <a href="ht://www.linkedin.com/company/1stop-ai/"><i class="fa fa-linkedin"></i></a> |
+                <a href="ht://www.instagram.com/1stop.ai/"><i class="fa fa-instagram"></i></a> |
+            </div>
+            <div class="contact">
+                <h3>Contact us</h3>
+                <a href="https://api.WhatsApp.com/send?phone= +919876873546" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                <a href="tel: +906794022"><i class="fa fa-phone"></i></a>
+                <a href="mailto: suppor@gmail.com"><i class="fa fa-envelope-o"></i></a>
+            </div>
+            <hr>
+            
+        </footer>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" 
+integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" 
+integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+                <!-- ======= Footer Section ======= -->
+        </body>
+        </html>
+    
